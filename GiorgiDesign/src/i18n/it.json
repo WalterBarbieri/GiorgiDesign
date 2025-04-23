@@ -1,0 +1,40 @@
+{
+  "title": "GiorgiDesign",
+  "nav": {
+    "home": "GIORGI DESIGN",
+    "about": "CHI SONO",
+    "tailoring": "SARTORIA",
+    "patternmaking": "MODELLISTICA",
+    "contact": "CONTATTI"
+  },
+  "landing": {
+    "heading": "GiorgiDesign"
+  },
+  "about": {
+    "heading": "Chi Sono",
+    "text_1": "Sono",
+    "text_2": "sarta e modellistia che unisce tradizione e innovazione."
+  },
+  "tailoring": {
+    "heading": "Sartoria",
+    "initial_1": "S",
+    "text_1": "artoria",
+    "initial_2": "M",
+    "text_2": "odellistica"
+  },
+  "patternmaking": {
+    "heading": "Modellistica",
+    "initial_1": "S",
+    "text_1": "artoria",
+    "initial_2": "M",
+    "text_2": "odellistica"
+  },
+  "footer": {
+    "heading": "Contattami",
+    "text_1": "Scrivimi per un preventivo o una consulenza. Sono a tua disposizione per ogni progetto!",
+    "phone": "Telefono",
+    "rights": "Tutti i diritti riservati.",
+    "vat": "P.IVA",
+    "developed": "Sito realizzato da"
+  }
+}

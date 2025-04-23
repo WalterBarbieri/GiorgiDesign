@@ -1,0 +1,333 @@
+---
+import "../../styles/global.css";
+import en from "../../i18n/en.json";
+import it from "../../i18n/it.json";
+
+export async function getStaticPaths() {
+  return [{ params: { lang: "it" } }, { params: { lang: "en" } }];
+}
+
+const { lang } = Astro.params;
+const t = lang === "it" ? it : en;
+---
+
+<html lang="{lang}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{t.title}</title>
+    <link rel="icon" href="/logo/logo.webp" type="image/x-icon" />
+  </head>
+  <body class="font-sans">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 w-full bg-pink-50 shadow z-50 h-[var(--navbar-height)]"
+      role="navigation"
+      aria-label="Menu principale"
+    >
+      <img
+        src="/logo/marchio.webp"
+        alt="GiorgiDesignLogo"
+        class="mx-auto mt-3 max-w-3/4"
+      />
+      <ul
+        class="flex flex-wrap justify-center gap-x-6 gap-y-2 p-4 font-bold text-sm"
+      >
+        <li>
+          <a
+            href="#giorgi-design"
+            data-link="giorgi-design"
+            class="whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+            >{t.nav.home}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            data-link="about"
+            class="whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+            >{t.nav.about}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#sartoria"
+            data-link="sartoria"
+            class="whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+            >{t.nav.tailoring}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#modellistica"
+            data-link="modellistica"
+            class="whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+            >{t.nav.patternmaking}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            data-link="contact"
+            class="whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+            >{t.nav.contact}</a
+          >
+        </li>
+        <ul class="flex gap-x-2 gap-y-2">
+          <li>
+            <a
+              href="/it"
+              class={`uppercase ${lang === "it" ? "underline text-pink-500" : ""} focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500`} 
+              >IT</a
+            >
+          </li>
+          <li>
+            <a
+              href="/en"
+              class={`uppercase ${lang === "en" ? "underline text-pink-500" : ""} focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500`}
+              >EN</a
+            >
+          </li>
+        </ul>
+      </ul>
+    </nav>
+
+    <div
+      class="snap-y snap-mandatory overflow-y-scroll h-screen scroll-smooth overscroll-y-contain scroll-hidden bg-pink-50"
+    >
+      <!-- Main -->
+      <main class="pt-[var(--navbar-height)] text-2xl">
+        <section
+          id="giorgi-design"
+          class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] w-auto snap-start flex items-center justify-center relative"
+        >
+          <h1 class="sr-only absolute top-0 left-0">{t.landing.heading}</h1>
+
+          <img
+            src="/images/12145.jpg"
+            alt="GiorgiDesignMainImage"
+            class="w-full max-w-4xl max-h-[calc(100vh-var(--navbar-height))] mx-auto object-contain"
+          />
+        </section>
+
+        <section
+          id="about"
+          class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] snap-start flex items-center px-10 relative"
+        >
+          <h2 class="sr-only absolute top-0 left-0">{t.about.heading}</h2>
+          <div
+            class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto"
+          >
+            <img
+              src="/images/12145.jpg"
+              alt="AboutImage"
+              class="max-h-[calc((100vh-var(--navbar-height))/2)] md:w-1/2 md:h-auto object-contain border-none"
+            />
+            <div class="md:w-1/2">
+              <p>
+                {t.about.text_1}
+                <span class="text-pink-500">GiorgiDesign</span>, {
+                  t.about.text_2
+                }
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="sartoria"
+          class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] snap-start flex items-center px-10 relative"
+        >
+          <h2 class="sr-only absolute top-0 left-0">{t.tailoring.heading}</h2>
+
+          <div
+            class="flex flex-col md:flex-row-reverse items-center gap-10 max-w-6xl mx-auto"
+          >
+            <img
+              src="/images/12145.jpg"
+              alt="SartoriaImage"
+              class="max-h-[calc((100vh-var(--navbar-height))/2)] md:w-1/2 md:h-auto object-contain border-none"
+            />
+            <div class="md:w-1/2">
+              <ul class="text-start md:text-end">
+                <li>
+                  <span class="text-pink-500">{t.tailoring.initial_1}</span>{
+                    t.tailoring.text_1
+                  }
+                </li>
+                <li>
+                  <span class="text-pink-500">{t.tailoring.initial_2}</span>{
+                    t.tailoring.text_2
+                  }
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="modellistica"
+          class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] snap-start flex items-center px-10 relative"
+        >
+          <h2 class="sr-only absolute top-0 left-0">
+            {t.patternmaking.heading}
+          </h2>
+
+          <div
+            class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto"
+          >
+            <img
+              src="/images/12145.jpg"
+              alt="ModellisticaImage"
+              class="max-h-[calc((100vh-var(--navbar-height))/2)] md:w-1/2 md:h-auto object-contain border-none"
+            />
+            <div class="md:w-1/2">
+              <ul class="text-start">
+                <li>
+                  <span class="text-pink-500">{t.patternmaking.initial_1}</span
+                  >{t.patternmaking.text_1}
+                </li>
+                <li>
+                  <span class="text-pink-500">{t.patternmaking.initial_2}</span
+                  >{t.patternmaking.text_2}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer
+        id="contact"
+        class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] snap-start flex flex-col justify-between items-center text-center"
+        role="contentinfo"
+        aria-label="Informazioni e Contatti"
+      >
+        <!-- Blocco contatti -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 my-auto w-full">
+          <h2 class="text-4xl mb-4 text-pink-500">{t.footer.heading}</h2>
+          <p class="mb-4">
+            {t.footer.text_1}
+          </p>
+
+          <ul class="mb-4">
+            <li class="mb-2">
+              {t.footer.phone}: <a
+                href="tel:+393383911964"
+                class="text-pink-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">+39 338 3911964</a
+              >
+            </li>
+            <li class="mb-2">
+              Email: <a
+                type="email"
+                href="mailto:laboratorio@giorgidesign.it"
+                class="text-pink-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">laboratorio@giorgidesign.it</a
+              >
+            </li>
+          </ul>
+
+          <div
+            class="flex flex-col md:flex-row-reverse justify-center items-center md:items-start gap-8 w-full"
+          >
+            <!-- Blocco icone -->
+            <div
+              class="flex flex-row md:flex-col justify-center items-center gap-4 w-full md:basis-1/2 md:h-[400px]"
+            >
+              <a
+                href="https://www.instagram.com/giorgi_design/"
+                target="_blank"
+                referrerpolicy="no-referrer"
+                class="focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+              >
+                <img
+                  src="/icons/square-instagram-brands.svg"
+                  alt="InstagramIcon"
+                  class="h-10 w-10"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/giulia.giorgi.92"
+                target="_blank"
+                referrerpolicy="no-referrer"
+                class="focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+              >
+                <img
+                  src="/icons/square-facebook-brands.svg"
+                  alt="FacebookIcon"
+                  class="h-10 w-10"
+                  loading="lazy"
+                /></a
+              >
+              <a
+                href="https://www.linkedin.com/in/giulia-giorgi-462450142/"
+                target="_blank"
+                referrerpolicy="no-referrer"
+                class="focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+                ><img
+                  src="/icons/linkedin-brands.svg"
+                  alt="LinkedInIcon"
+                  class="h-10 w-10"
+                  loading="lazy"
+                /></a
+              >
+            </div>
+
+            <!-- Mappa -->
+            <a
+              href="https://maps.app.goo.gl/9xfumPGWfQQyx6nA8"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Apri la posizione su Google Maps"
+              class="block w-full md:basis-1/2 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+            >
+              <picture>
+                <source
+                  srcset="/images/GIORGI_DESIGN_MAP_400.webp"
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="/images/GIORGI_DESIGN_MAP_250.webp"
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <img
+                  src="/images/GIORGI_DESIGN_MAP.png"
+                  alt="Mappa della sede Giorgi Design"
+                  class="w-auto h-auto mx-auto"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </div>
+        </div>
+
+        <!-- Blocco credits-->
+        <div class="bg-pink-100 text-pink-500 w-full py-4 md:py-6">
+          <div
+            class="max-w-6xl mx-auto text-xs md:text-sm flex flex-col md:flex-row items-center justify-between gap-y-2"
+          >
+            <p>
+              &copy; {new Date().getFullYear()} GiorgiDesign. {t.footer.rights}
+            </p>
+            <p>{t.footer.vat}: 00000000000000000</p>
+            <p>
+              {t.footer.developed}
+              <a
+                href="https://walterbarbieri.it"
+                target="_blank"
+                referrerpolicy="no-referrer"
+                class="focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+              >
+                BWFullStackDeveloper
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/scripts/nav-active.js"></script>
+  </body>
+</html>

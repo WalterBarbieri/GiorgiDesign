@@ -1,0 +1,41 @@
+{
+    "title": "GiorgiDesign",
+    "nav": {
+      "home": "GIORGI DESIGN",
+      "about": "ABOUT ME",
+      "tailoring": "TAILORING",
+      "patternmaking": "PATTERNMAKING",
+      "contact": "CONTACT"
+    },
+    "landing": {
+      "heading": "GiorgiDesign"
+    },
+    "about": {
+      "heading": "About Me",
+      "text_1": "I am",
+      "text_2": "a tailor and patternmaker who blends tradition with innovation."
+    },
+    "tailoring": {
+      "heading": "Tailoring",
+      "initial_1": "T",
+      "text_1": "ailoring",
+      "initial_2": "P",
+      "text_2": "atternmaking"
+    },
+    "patternmaking": {
+      "heading": "Patternmaking",
+      "initial_1": "T",
+      "text_1": "ailoring",
+      "initial_2": "P",
+      "text_2": "atternmaking"
+    },
+    "footer": {
+      "heading": "Contact Me",
+      "text_1": "Write me for a quote or a consultation. I'm here for your next project!",
+      "phone": "Phone",
+      "rights": "All rights reserved.",
+      "vat": "VAT",
+      "developed": "Website by"
+    }
+  }
+  

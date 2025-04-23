@@ -6,9 +6,14 @@ document.addEventListener("DOMContentLoaded",  () => {
             const id = entry.target.id;
             const link = document.querySelector(`nav a[data-link="${id}"]`);
             if (entry.isIntersecting) {
-                navLinks.forEach(a => a.classList.remove("underline"));
+                navLinks.forEach(a => {
+                    if (!a.dataset.link) return;
+                    a.classList.remove("underline");
+                    a.classList.remove("text-pink-500");
+                } );
                 if (link) {
                     link.classList.add("underline");
+                    link.classList.add("text-pink-500");
                 }
             }
         })
