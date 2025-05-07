@@ -1,41 +1,48 @@
 {
-    "title": "GiorgiDesign",
-    "nav": {
-      "home": "GIORGI DESIGN",
-      "about": "ABOUT ME",
-      "tailoring": "TAILORING",
-      "patternmaking": "PATTERNMAKING",
-      "contact": "CONTACT"
-    },
-    "landing": {
-      "heading": "GiorgiDesign"
-    },
-    "about": {
-      "heading": "About Me",
-      "text_1": "I am",
-      "text_2": "a tailor and patternmaker who blends tradition with innovation."
-    },
-    "tailoring": {
-      "heading": "Tailoring",
-      "initial_1": "T",
-      "text_1": "ailoring",
-      "initial_2": "P",
-      "text_2": "atternmaking"
-    },
-    "patternmaking": {
-      "heading": "Patternmaking",
-      "initial_1": "T",
-      "text_1": "ailoring",
-      "initial_2": "P",
-      "text_2": "atternmaking"
-    },
-    "footer": {
-      "heading": "Contact Me",
-      "text_1": "Write me for a quote or a consultation. I'm here for your next project!",
-      "phone": "Phone",
-      "rights": "All rights reserved.",
-      "vat": "VAT",
-      "developed": "Website by"
-    }
+  "title": "GiorgiDesign",
+  "nav": {
+    "home": "GIORGI DESIGN",
+    "about": "ABOUT ME",
+    "tailoring": "TAILORING",
+    "patternmaking": "PATTERNMAKING",
+    "contact": "CONTACT"
+  },
+  "landing": {
+    "heading": "GiorgiDesign"
+  },
+  "about": {
+    "heading": "About Me",
+    "text_1": "Welcome",
+    "text_2": "to my workshop!",
+    "text_3": "From design to creation, I love to take care of every single detail with precision and attention.",
+    "text_4": "'Elegance is not about being noticed, it's about being remembered.'"
+  },
+  "tailoring": {
+    "heading": "Tailoring",
+    "initial_1": "C",
+    "text_1": "ustom tailoring",
+    "initial_2": "I",
+    "text_2": "ndustrial prototyping"
+  },
+  "patternmaking": {
+    "heading": "Patternmaking",
+    "initial_1": "P",
+    "text_1": "atternmaking with Lectra System CAD",
+    "initial_2": "G",
+    "text_2": "rading with Lectra System CAD",
+    "initial_3": "P",
+    "text_3": "attern digitization",
+    "initial_4": "P",
+    "text_4": "lotter printing",
+    "initial_5": "M",
+    "text_5": "anual patternmaking"
+  },
+  "footer": {
+    "heading": "Contact Me",
+    "text_1": "Write me for a quote or a consultation. I'm here for your next project!",
+    "phone": "Phone",
+    "rights": "All rights reserved.",
+    "vat": "VAT",
+    "developed": "Website by"
   }
-  
+}

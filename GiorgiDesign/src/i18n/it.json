@@ -12,22 +12,30 @@
   },
   "about": {
     "heading": "Chi Sono",
-    "text_1": "Sono",
-    "text_2": "sarta e modellistia che unisce tradizione e innovazione."
+    "text_1": "Benvenuti",
+    "text_2": "nel mio laboratorio!",
+    "text_3": "Dal design alla realizzazione, amo curare ogni singolo dettaglio con precisione e attenzione.",
+    "text_4": "'Eleganza non è farsi notare, ma farsi ricordare'"
   },
   "tailoring": {
     "heading": "Sartoria",
     "initial_1": "S",
-    "text_1": "artoria",
-    "initial_2": "M",
-    "text_2": "odellistica"
+    "text_1": "artoria su misura",
+    "initial_2": "P",
+    "text_2": "rototipia industriale"
   },
   "patternmaking": {
     "heading": "Modellistica",
-    "initial_1": "S",
-    "text_1": "artoria",
-    "initial_2": "M",
-    "text_2": "odellistica"
+    "initial_1": "M",
+    "text_1": "odellistica con CAD Lectra System",
+    "initial_2": "S",
+    "text_2": "viluppo taglia CAD con Lectra System",
+    "initial_3": "D",
+    "text_3": "igitalizzazione cartamodelli",
+    "initial_4": "S",
+    "text_4": "tampa con plotter",
+    "initial_5": "M",
+    "text_5": "odellistica a banco"
   },
   "footer": {
     "heading": "Contattami",

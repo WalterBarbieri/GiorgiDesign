@@ -77,7 +77,7 @@ const t = lang === "it" ? it : en;
           <li>
             <a
               href="/it"
-              class={`uppercase ${lang === "it" ? "underline text-pink-500" : ""} focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500`} 
+              class={`uppercase ${lang === "it" ? "underline text-pink-500" : ""} focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500`}
               >IT</a
             >
           </li>
@@ -96,7 +96,7 @@ const t = lang === "it" ? it : en;
       class="snap-y snap-mandatory overflow-y-scroll h-screen scroll-smooth overscroll-y-contain scroll-hidden bg-pink-50"
     >
       <!-- Main -->
-      <main class="pt-[var(--navbar-height)] text-2xl">
+      <main class="pt-[var(--navbar-height)]">
         <section
           id="giorgi-design"
           class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] w-auto snap-start flex items-center justify-center relative"
@@ -104,9 +104,9 @@ const t = lang === "it" ? it : en;
           <h1 class="sr-only absolute top-0 left-0">{t.landing.heading}</h1>
 
           <img
-            src="/images/12145.jpg"
+            src="/images/HOME.JPEG"
             alt="GiorgiDesignMainImage"
-            class="w-full max-w-4xl max-h-[calc(100vh-var(--navbar-height))] mx-auto object-contain"
+            class="w-auto max-w-4xl max-h-[calc(100vh-var(--navbar-height))] mx-auto object-contain"
           />
         </section>
 
@@ -116,20 +116,27 @@ const t = lang === "it" ? it : en;
         >
           <h2 class="sr-only absolute top-0 left-0">{t.about.heading}</h2>
           <div
-            class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto"
+            class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto h-[calc(100vh-var(--navbar-height)-50px)] md:h-[calc((100vh-var(--navbar-height))/2)]"
           >
             <img
-              src="/images/12145.jpg"
+              src="/images/ABOUTME_NATURAL.JPEG"
               alt="AboutImage"
               class="max-h-[calc((100vh-var(--navbar-height))/2)] md:w-1/2 md:h-auto object-contain border-none"
             />
-            <div class="md:w-1/2">
-              <p>
-                {t.about.text_1}
-                <span class="text-pink-500">GiorgiDesign</span>, {
-                  t.about.text_2
-                }
+            <div
+              class="md:w-1/2 text-center md:text-start flex flex-col h-full justify-evenly"
+            >
+              <h3 class="text-2xl sm:text-3xl">
+                <span class="text-pink-500">{t.about.text_1}</span>
+                {t.about.text_2}
+              </h3>
+              <p class="text-base sm:text-2xl">
+                {t.about.text_3}
               </p>
+              <i class="font-light"
+                >{t.about.text_4}
+                <span class="not-italic text-pink-500">Giorgio Armani</span></i
+              >
             </div>
           </div>
         </section>
@@ -141,16 +148,24 @@ const t = lang === "it" ? it : en;
           <h2 class="sr-only absolute top-0 left-0">{t.tailoring.heading}</h2>
 
           <div
-            class="flex flex-col md:flex-row-reverse items-center gap-10 max-w-6xl mx-auto"
+            class="flex flex-col-reverse md:flex-row-reverse items-center gap-10 max-w-6xl mx-auto"
           >
-            <img
-              src="/images/12145.jpg"
-              alt="SartoriaImage"
-              class="max-h-[calc((100vh-var(--navbar-height))/2)] md:w-1/2 md:h-auto object-contain border-none"
-            />
+            <picture class="md:max-w-1/2">
+              <source
+                srcset="/images/SARTORIA.png"
+                media="(min-width: 1250px)"
+                type="image/webp"
+              />
+              <img
+                src="/images/SARTORIA_1.JPEG"
+                alt="SartoriaImage"
+                class="max-h-[calc((100vh-var(--navbar-height))/2)] md:max-h-[calc((100vh-var(--navbar-height)))] object-contain border-none"
+              />
+            </picture>
+
             <div class="md:w-1/2">
-              <ul class="text-start md:text-end">
-                <li>
+              <ul class="text-start md:text-end text-2xl">
+                <li class="pb-2">
                   <span class="text-pink-500">{t.tailoring.initial_1}</span>{
                     t.tailoring.text_1
                   }
@@ -176,20 +191,44 @@ const t = lang === "it" ? it : en;
           <div
             class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto"
           >
-            <img
-              src="/images/12145.jpg"
-              alt="ModellisticaImage"
-              class="max-h-[calc((100vh-var(--navbar-height))/2)] md:w-1/2 md:h-auto object-contain border-none"
+          <picture class="md:max-w-1/2">
+            <source
+              srcset="/images/MODELLISTICA_BANCO.JPEG"
+              media="(min-width: 768px) and (max-width: 1249px)"
+              type="image/webp"
             />
+            <source
+              srcset="/images/MODELLISTICA.png"
+              media="(min-width: 1250px)"
+              type="image/webp"
+            />
+            <img
+              src="/images/MODELLISTICA_CAD.png"
+              alt="ModellisticaImage"
+              class="max-h-[calc((100vh-var(--navbar-height))/2)] md:max-h-[calc((100vh-var(--navbar-height)))] object-contain border-none"
+            />
+          </picture>
             <div class="md:w-1/2">
-              <ul class="text-start">
-                <li>
+              <ul class="text-start text-2xl">
+                <li class="pb-2">
                   <span class="text-pink-500">{t.patternmaking.initial_1}</span
                   >{t.patternmaking.text_1}
                 </li>
-                <li>
+                <li class="pb-2">
                   <span class="text-pink-500">{t.patternmaking.initial_2}</span
                   >{t.patternmaking.text_2}
+                </li>
+                <li class="pb-2">
+                  <span class="text-pink-500">{t.patternmaking.initial_3}</span
+                  >{t.patternmaking.text_3}
+                </li>
+                <li class="pb-2">
+                  <span class="text-pink-500">{t.patternmaking.initial_4}</span
+                  >{t.patternmaking.text_4}
+                </li>
+                <li>
+                  <span class="text-pink-500">{t.patternmaking.initial_5}</span
+                  >{t.patternmaking.text_5}
                 </li>
               </ul>
             </div>
@@ -205,8 +244,12 @@ const t = lang === "it" ? it : en;
         aria-label="Informazioni e Contatti"
       >
         <!-- Blocco contatti -->
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 my-auto w-full">
-          <h2 class="text-4xl mb-4 text-pink-500">{t.footer.heading}</h2>
+        <div
+          class="max-w-4xl mx-auto px-4 sm:px-6 my-auto w-full text-sm sm:text-base"
+        >
+          <h2 class="text-2xl sm:text-4xl mb-4 text-pink-500">
+            {t.footer.heading}
+          </h2>
           <p class="mb-4">
             {t.footer.text_1}
           </p>
@@ -215,14 +258,16 @@ const t = lang === "it" ? it : en;
             <li class="mb-2">
               {t.footer.phone}: <a
                 href="tel:+393383911964"
-                class="text-pink-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">+39 338 3911964</a
+                class="text-pink-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+                >+39 338 3911964</a
               >
             </li>
             <li class="mb-2">
               Email: <a
                 type="email"
                 href="mailto:laboratorio@giorgidesign.it"
-                class="text-pink-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">laboratorio@giorgidesign.it</a
+                class="text-pink-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+                >laboratorio@giorgidesign.it</a
               >
             </li>
           </ul>
@@ -232,7 +277,7 @@ const t = lang === "it" ? it : en;
           >
             <!-- Blocco icone -->
             <div
-              class="flex flex-row md:flex-col justify-center items-center gap-4 w-full md:basis-1/2 md:h-[400px]"
+              class="flex flex-row md:flex-col justify-center items-center gap-4 w-full md:basis-1/2 h-full md:h-[400px] [@media(max-height:700px)]:h-auto"
             >
               <a
                 href="https://www.instagram.com/giorgi_design/"
@@ -284,6 +329,11 @@ const t = lang === "it" ? it : en;
             >
               <picture>
                 <source
+                  srcset="/images/GIORGI_DESIGN_MAP_100.webp"
+                  media="(max-height: 700px)"
+                  type="image/webp"
+                />
+                <source
                   srcset="/images/GIORGI_DESIGN_MAP_400.webp"
                   media="(min-width: 768px)"
                   type="image/webp"
@@ -312,7 +362,7 @@ const t = lang === "it" ? it : en;
             <p>
               &copy; {new Date().getFullYear()} GiorgiDesign. {t.footer.rights}
             </p>
-            <p>{t.footer.vat}: 00000000000000000</p>
+            <p>{t.footer.vat} 02532740509</p>
             <p>
               {t.footer.developed}
               <a
