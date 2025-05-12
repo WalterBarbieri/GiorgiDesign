@@ -44,5 +44,20 @@
     "rights": "Tutti i diritti riservati.",
     "vat": "P.IVA",
     "developed": "Sito realizzato da"
+  },
+  "meta": {
+    "title": "Giorgi Design - Sartoria e Modellistica",
+    "description": "Scopri Giorgi Design, tradizione e innovazione nella sartoria e modellistica.",
+    "keywords": "sartoria, modellistica, moda, design, giorgi, giorgi design, Vecchiano, Pisa, Toscana, Italia, IT, EN, sartoria su misura, sartoria industriale, prototipia industriale, modellistica CAD, digitalizzazione cartamodelli, stampa con plotter, modellistica a banco, macchina piana lineare industriale, macchina piana lineare, macchina piana, macchina overlock, macchina taglia e cuci, macchina da cucire, sartoria artigianale, sartoria, CAD, CAD Lectra, CAD Lectra System, digit, plotter, cartamodelli, taglio, stoffe, abiti, stoffa, abito, giulia giorgi, giulia",
+    "author": "Giorgi Design",
+    "ogTitle": "Giorgi Design - Sartoria e Modellistica",
+    "ogDescription": "Scopri Giorgi Design, tradizione e innovazione nella sartoria e modellistica.",
+    "ogImage": "https://giorgidesign.it/logo/logo.webp",
+    "ogUrl": "https://giorgidesign.it/it",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Giorgi Design - Sartoria e Modellistica",
+    "twitterDescription": "Scopri Giorgi Design, tradizione e innovazione nella sartoria e modellistica.",
+    "twitterImage": "https://giorgidesign.it/logo/logo.webp"
   }
 }

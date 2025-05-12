@@ -1,5 +1,4 @@
 {
-  "title": "GiorgiDesign",
   "nav": {
     "home": "GIORGI DESIGN",
     "about": "ABOUT ME",
@@ -31,7 +30,7 @@
     "initial_2": "G",
     "text_2": "rading with Lectra System CAD",
     "initial_3": "P",
-    "text_3": "attern digitization",
+    "text_3": "attern digit",
     "initial_4": "P",
     "text_4": "lotter printing",
     "initial_5": "M",
@@ -44,5 +43,20 @@
     "rights": "All rights reserved.",
     "vat": "VAT",
     "developed": "Website by"
+  },
+  "meta": {
+    "title": "Giorgi Design - Tailoring and Patternmaking",
+    "description": "Discover Giorgi Design, tradition and innovation in tailoring and patternmaking.",
+    "keywords": "tailoring, patternmaking, fashion, design, giorgi, giorgi design, Vecchiano, Pisa, Tuscany, Italy, IT, EN, made-to-measure tailoring, industrial tailoring, industrial prototyping, CAD patternmaking, pattern digitization, pattern digit, plotter printing, manual patternmaking, industrial sewing machine, linear sewing machine, overlock machine, serger, sewing machine, artisanal tailoring, CAD, CAD Lectra, CAD Lectra System, digit, plotter, patterns, cutting, fabrics, clothes, fabric, dress, giulia giorgi, giulia",
+    "author": "Giorgi Design",
+    "ogTitle": "Giorgi Design - Tailoring and Patternmaking",
+    "ogDescription": "Discover Giorgi Design, tradition and innovation in tailoring and patternmaking.",
+    "ogImage": "https://giorgidesign.it/logo/logo.webp",
+    "ogUrl": "https://giorgidesign.it/en",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Giorgi Design - Tailoring and Patternmaking",
+    "twitterDescription": "Discover Giorgi Design, tradition and innovation in tailoring and patternmaking.",
+    "twitterImage": "https://giorgidesign.it/logo/logo.webp"
   }
 }

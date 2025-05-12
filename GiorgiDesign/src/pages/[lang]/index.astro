@@ -15,7 +15,26 @@ const t = lang === "it" ? it : en;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{t.title}</title>
+    <link rel="alternate" hreflang="it" href="https://giorgidesign.it/it" />
+    <link rel="alternate" hreflang="en" href="https://giorgidesign.it/en" />
+    <link rel="alternate" hreflang="x-default" href="https://giorgidesign.it" />
+    <title>{t.meta.title}</title>
+    <meta name="description" content={t.meta.description} />
+    <meta name="keywords" content={t.meta.keywords} />
+    <meta name="author" content={t.meta.author} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={t.meta.ogTitle} />
+    <meta property="og:description" content={t.meta.ogDescription} />
+    <meta property="og:image" content={t.meta.ogImage} />
+    <meta property="og:url" content={t.meta.ogUrl} />
+    <meta property="og:type" content={t.meta.ogType} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content={t.meta.twitterCard} />
+    <meta name="twitter:title" content={t.meta.twitterTitle} />
+    <meta name="twitter:description" content={t.meta.twitterDescription} />
+    <meta name="twitter:image" content={t.meta.twitterImage} />
     <link rel="icon" href="/logo/logo.webp" type="image/x-icon" />
   </head>
   <body class="font-sans">
@@ -27,7 +46,7 @@ const t = lang === "it" ? it : en;
     >
       <img
         src="/logo/marchio.webp"
-        alt="GiorgiDesignLogo"
+        alt="Giorgi Design Logo"
         class="mx-auto mt-3 max-w-3/4"
       />
       <ul
@@ -102,12 +121,14 @@ const t = lang === "it" ? it : en;
           class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] w-auto snap-start flex items-center justify-center relative"
         >
           <h1 class="sr-only absolute top-0 left-0">{t.landing.heading}</h1>
-
-          <img
-            src="/images/HOME.JPEG"
-            alt="GiorgiDesignMainImage"
-            class="w-auto max-w-4xl max-h-[calc(100vh-var(--navbar-height))] mx-auto object-contain"
-          />
+          <picture>
+            <source srcset="/images/HOME.webp" type="image/webp" />
+            <img
+              src="/images/HOME.JPEG"
+              alt="Giorgi Design Home Image"
+              class="w-auto max-w-4xl max-h-[calc(100vh-var(--navbar-height))] mx-auto object-contain"
+            />
+          </picture>
         </section>
 
         <section
@@ -116,15 +137,19 @@ const t = lang === "it" ? it : en;
         >
           <h2 class="sr-only absolute top-0 left-0">{t.about.heading}</h2>
           <div
-            class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto h-[calc(100vh-var(--navbar-height)-50px)] md:h-[calc((100vh-var(--navbar-height))/2)]"
+            class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto h-[calc(100vh-var(--navbar-height)-50px)]"
           >
-            <img
-              src="/images/ABOUTME_NATURAL.JPEG"
-              alt="AboutImage"
-              class="max-h-[calc((100vh-var(--navbar-height))/2)] md:w-1/2 md:h-auto object-contain border-none"
-            />
+            <picture class="md:w-1/2">
+              <source srcset="/images/ABOUT_ME_NO_COLOR.webp" type="image/webp" />
+              <img
+                src="/images/ABOUT_ME_NO_COLOR.jpeg"
+                alt="Giorgi Design About Me Image"
+                class="max-h-[calc((100vh-var(--navbar-height))/2)] md:h-auto w-full object-contain border-none"
+                loading="lazy"
+              />
+            </picture>
             <div
-              class="md:w-1/2 text-center md:text-start flex flex-col h-full justify-evenly"
+              class="md:w-1/2 text-center md:text-start flex flex-col h-full md:h-1/2 justify-evenly"
             >
               <h3 class="text-2xl sm:text-3xl">
                 <span class="text-pink-500">{t.about.text_1}</span>
@@ -152,14 +177,20 @@ const t = lang === "it" ? it : en;
           >
             <picture class="md:max-w-1/2">
               <source
-                srcset="/images/SARTORIA.png"
+                srcset="/images/SARTORIA_1.webp"
+                media="(max-width: 1249px)"
+                type="image/webp"
+              />
+              <source
+                srcset="/images/SARTORIA.webp"
                 media="(min-width: 1250px)"
                 type="image/webp"
               />
               <img
                 src="/images/SARTORIA_1.JPEG"
-                alt="SartoriaImage"
+                alt="Giorgi Design Tailoring Image"
                 class="max-h-[calc((100vh-var(--navbar-height))/2)] md:max-h-[calc((100vh-var(--navbar-height)))] object-contain border-none"
+                loading="lazy"
               />
             </picture>
 
@@ -191,32 +222,34 @@ const t = lang === "it" ? it : en;
           <div
             class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto"
           >
-          <picture class="md:max-w-1/2">
-            <source
-              srcset="/images/MODELLISTICA_BANCO.JPEG"
-              media="(min-width: 768px) and (max-width: 1249px)"
-              type="image/webp"
-            />
-            <source
-              srcset="/images/MODELLISTICA.png"
-              media="(min-width: 1250px)"
-              type="image/webp"
-            />
-            <img
-              src="/images/MODELLISTICA_CAD.png"
-              alt="ModellisticaImage"
-              class="max-h-[calc((100vh-var(--navbar-height))/2)] md:max-h-[calc((100vh-var(--navbar-height)))] object-contain border-none"
-            />
-          </picture>
+            <picture class="md:max-w-1/2">
+              <source
+                srcset="/images/MODELLISTICA_CAD.webp"
+                media="(max-width: 767px)"
+                type="image/webp"
+              />
+              <source
+                srcset="/images/MODELLISTICA_BANCO.webp"
+                media="(min-width: 768px) and (max-width: 1249px)"
+                type="image/webp"
+              />
+              <source
+                srcset="/images/MODELLISTICA.webp"
+                media="(min-width: 1250px)"
+                type="image/webp"
+              />
+              <img
+                src="/images/MODELLISTICA_CAD.png"
+                alt="Giorgi Design Patternmaking Image"
+                class="max-h-[calc((100vh-var(--navbar-height))/2)] md:max-h-[calc((100vh-var(--navbar-height)))] object-contain border-none"
+                loading="lazy"
+              />
+            </picture>
             <div class="md:w-1/2">
               <ul class="text-start text-2xl">
                 <li class="pb-2">
                   <span class="text-pink-500">{t.patternmaking.initial_1}</span
                   >{t.patternmaking.text_1}
-                </li>
-                <li class="pb-2">
-                  <span class="text-pink-500">{t.patternmaking.initial_2}</span
-                  >{t.patternmaking.text_2}
                 </li>
                 <li class="pb-2">
                   <span class="text-pink-500">{t.patternmaking.initial_3}</span
@@ -287,7 +320,7 @@ const t = lang === "it" ? it : en;
               >
                 <img
                   src="/icons/square-instagram-brands.svg"
-                  alt="InstagramIcon"
+                  alt="Instagram Icon"
                   class="h-10 w-10"
                   loading="lazy"
                 />
@@ -300,7 +333,7 @@ const t = lang === "it" ? it : en;
               >
                 <img
                   src="/icons/square-facebook-brands.svg"
-                  alt="FacebookIcon"
+                  alt="Facebook Icon"
                   class="h-10 w-10"
                   loading="lazy"
                 /></a
@@ -312,7 +345,7 @@ const t = lang === "it" ? it : en;
                 class="focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
                 ><img
                   src="/icons/linkedin-brands.svg"
-                  alt="LinkedInIcon"
+                  alt="LinkedIn Icon"
                   class="h-10 w-10"
                   loading="lazy"
                 /></a
@@ -378,6 +411,6 @@ const t = lang === "it" ? it : en;
         </div>
       </footer>
     </div>
-    <script type="module" src="/src/scripts/nav-active.js"></script>
+    <script type="module" src="/scripts/nav-active.js"></script>
   </body>
 </html>
