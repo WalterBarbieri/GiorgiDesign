@@ -1,6 +1,4 @@
 User-agent: *
-Allow: /it
-Allow: /en
-Disallow: /
+Allow: /
 
 Sitemap: https://giorgidesign.it/sitemap.xml
