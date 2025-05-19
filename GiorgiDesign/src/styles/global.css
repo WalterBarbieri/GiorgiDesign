@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  --vh: 100vh;
   --navbar-height: 9rem;
 }
 .scroll-hidden {
@@ -17,5 +18,11 @@
     --navbar-height: 8rem;
   }
   
+}
+
+@supports (height: 100svh) {
+  :root {
+    --vh: 100svh;
+  }
 }
   

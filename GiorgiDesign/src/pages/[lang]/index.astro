@@ -11,10 +11,11 @@ const { lang } = Astro.params;
 const t = lang === "it" ? it : en;
 ---
 
-<html lang="{lang}">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={`https://giorgidesign.it/${lang}`} />
     <link rel="alternate" hreflang="it" href="https://giorgidesign.it/it" />
     <link rel="alternate" hreflang="en" href="https://giorgidesign.it/en" />
     <link rel="alternate" hreflang="x-default" href="https://giorgidesign.it" />
@@ -92,22 +93,24 @@ const t = lang === "it" ? it : en;
             >{t.nav.contact}</a
           >
         </li>
-        <ul class="flex gap-x-2 gap-y-2">
-          <li>
-            <a
-              href="/it"
-              class={`uppercase ${lang === "it" ? "underline text-pink-500" : ""} focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500`}
-              >IT</a
-            >
-          </li>
-          <li>
-            <a
-              href="/en"
-              class={`uppercase ${lang === "en" ? "underline text-pink-500" : ""} focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500`}
-              >EN</a
-            >
-          </li>
-        </ul>
+        <li>
+          <ul class="flex gap-x-2 gap-y-2">
+            <li>
+              <a
+                href="/it"
+                class={`uppercase ${lang === "it" ? "underline text-pink-500" : ""} focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500`}
+                >IT</a
+              >
+            </li>
+            <li>
+              <a
+                href="/en"
+                class={`uppercase ${lang === "en" ? "underline text-pink-500" : ""} focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500`}
+                >EN</a
+              >
+            </li>
+          </ul>
+        </li>
       </ul>
     </nav>
 
@@ -118,33 +121,38 @@ const t = lang === "it" ? it : en;
       <main class="pt-[var(--navbar-height)]">
         <section
           id="giorgi-design"
-          class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] w-auto snap-start flex items-center justify-center relative"
+          role="main"
+          aria-labelledby="landing-heading"
+          class="scroll-mt-[var(--navbar-height)] h-[calc(var(--vh)-var(--navbar-height))] w-auto snap-start flex items-center justify-center relative"
         >
-          <h1 class="sr-only absolute top-0 left-0">{t.landing.heading}</h1>
+          <h1 id="landing-heading" class="sr-only absolute top-0 left-0">{t.landing.heading}</h1>
           <picture>
             <source srcset="/images/HOME.webp" type="image/webp" />
             <img
               src="/images/HOME.JPEG"
               alt="Giorgi Design Home Image"
-              class="w-auto max-w-4xl max-h-[calc(100vh-var(--navbar-height))] mx-auto object-contain"
+              class="w-auto max-w-4xl max-h-[calc(var(--vh)-var(--navbar-height))] mx-auto object-contain"
             />
           </picture>
         </section>
 
         <section
           id="about"
-          class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] snap-start flex items-center px-10 relative"
+          class="scroll-mt-[var(--navbar-height)] h-[calc(var(--vh)-var(--navbar-height))] snap-start flex items-center px-10 relative"
         >
           <h2 class="sr-only absolute top-0 left-0">{t.about.heading}</h2>
           <div
-            class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto h-[calc(100vh-var(--navbar-height)-50px)]"
+            class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto h-[calc(var(--vh)-var(--navbar-height)-50px)]"
           >
             <picture class="md:w-1/2">
-              <source srcset="/images/ABOUT_ME_NO_COLOR.webp" type="image/webp" />
+              <source
+                srcset="/images/ABOUT_ME_NO_COLOR.webp"
+                type="image/webp"
+              />
               <img
                 src="/images/ABOUT_ME_NO_COLOR.jpeg"
                 alt="Giorgi Design About Me Image"
-                class="max-h-[calc((100vh-var(--navbar-height))/2)] md:h-auto w-full object-contain border-none"
+                class="max-h-[calc((var(--vh)-var(--navbar-height))/2)] md:h-auto w-full object-contain border-none"
                 loading="lazy"
               />
             </picture>
@@ -168,7 +176,7 @@ const t = lang === "it" ? it : en;
 
         <section
           id="sartoria"
-          class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] snap-start flex items-center px-10 relative"
+          class="scroll-mt-[var(--navbar-height)] h-[calc(var(--vh)-var(--navbar-height))] snap-start flex items-center px-10 relative"
         >
           <h2 class="sr-only absolute top-0 left-0">{t.tailoring.heading}</h2>
 
@@ -189,7 +197,7 @@ const t = lang === "it" ? it : en;
               <img
                 src="/images/SARTORIA_1.JPEG"
                 alt="Giorgi Design Tailoring Image"
-                class="max-h-[calc((100vh-var(--navbar-height))/2)] md:max-h-[calc((100vh-var(--navbar-height)))] object-contain border-none"
+                class="max-h-[calc((var(--vh)-var(--navbar-height))/2)] md:max-h-[calc((var(--vh)-var(--navbar-height)))] object-contain border-none"
                 loading="lazy"
               />
             </picture>
@@ -213,7 +221,7 @@ const t = lang === "it" ? it : en;
 
         <section
           id="modellistica"
-          class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] snap-start flex items-center px-10 relative"
+          class="scroll-mt-[var(--navbar-height)] h-[calc(var(--vh)-var(--navbar-height))] snap-start flex items-center px-10 relative"
         >
           <h2 class="sr-only absolute top-0 left-0">
             {t.patternmaking.heading}
@@ -241,7 +249,7 @@ const t = lang === "it" ? it : en;
               <img
                 src="/images/MODELLISTICA_CAD.png"
                 alt="Giorgi Design Patternmaking Image"
-                class="max-h-[calc((100vh-var(--navbar-height))/2)] md:max-h-[calc((100vh-var(--navbar-height)))] object-contain border-none"
+                class="max-h-[calc((var(--vh)-var(--navbar-height))/2)] md:max-h-[calc((var(--vh)-var(--navbar-height)))] object-contain border-none"
                 loading="lazy"
               />
             </picture>
@@ -272,7 +280,7 @@ const t = lang === "it" ? it : en;
       <!-- Footer -->
       <footer
         id="contact"
-        class="scroll-mt-[var(--navbar-height)] h-[calc(100vh-var(--navbar-height))] snap-start flex flex-col justify-between items-center text-center"
+        class="scroll-mt-[var(--navbar-height)] h-[calc(var(--vh)-var(--navbar-height))] snap-start flex flex-col justify-between items-center text-center"
         role="contentinfo"
         aria-label="Informazioni e Contatti"
       >
